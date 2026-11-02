@@ -1,0 +1,318 @@
+/* --- VARIABLES Y CONFIGURACIÓN BASE --- */
+:root {
+  --col-green: #007A3D;
+  --col-red: #E31B23;
+  --col-yellow: #FFC72C;
+  --col-black: #1A1A1A;
+  --col-white: #FFFFFF;
+  --col-border-gray: #D1D5DB;
+  --shadow-book: 0 15px 35px rgba(0, 0, 0, 0.25);
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background: #EAEFF2;
+  color: var(--col-black);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* --- BARRA SUPERIOR DE CONTROLES --- */
+.top-bar {
+  background: var(--col-black);
+  color: var(--col-white);
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid var(--col-yellow);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 100;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.badge {
+  background: var(--col-red);
+  color: var(--col-white);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+#page-indicator {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #E2E8F0;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary { background: #374151; color: white; }
+.btn-secondary:hover { background: #4B5563; }
+
+.btn-primary { background: var(--col-green); color: white; }
+.btn-primary:hover { background: #005F2F; }
+
+/* --- ESCENARIO 3D Y LIBRO --- */
+.book-stage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 2000px;
+  padding: 20px;
+}
+
+.book {
+  position: relative;
+  width: 960px;
+  height: 620px;
+}
+
+.paper {
+  position: absolute;
+  width: 480px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+  box-shadow: var(--shadow-book);
+}
+
+.paper.flipped {
+  transform: rotateY(-180deg);
+}
+
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--col-white);
+  backface-visibility: hidden;
+  padding: 20px;
+  border: 1px solid #E5E7EB;
+  overflow: hidden;
+}
+
+.page.front { z-index: 2; border-radius: 0 8px 8px 0; }
+.page.back { z-index: 1; transform: rotateY(180deg); border-radius: 8px 0 0 8px; }
+
+/* Efecto de lomo realista */
+.page.front::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 25px; height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.12), transparent);
+  pointer-events: none;
+}
+.page.back::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; width: 25px; height: 100%;
+  background: linear-gradient(to left, rgba(0,0,0,0.12), transparent);
+  pointer-events: none;
+}
+
+/* --- PORTADA --- */
+.cover-page {
+  background: linear-gradient(135deg, #ffffff 0%, #f7f9fa 100%);
+  border: 8px solid var(--col-green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 20px;
+}
+
+.shield-img { width: 90px; height: auto; }
+.cover-title { font-size: 1.8rem; color: var(--col-black); margin-top: 5px; }
+.cover-subtitle { font-size: 1.4rem; color: var(--col-green); font-weight: 800; }
+.motto { font-size: 0.95rem; font-weight: 700; color: var(--col-red); letter-spacing: 2px; }
+
+.promo-photo-frame {
+  width: 100%;
+  height: 260px;
+  border: 4px solid var(--col-yellow);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: #E5E7EB;
+}
+
+.promo-img { width: 100%; height: 100%; object-fit: cover; }
+
+.inner-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  background: #FAFAFA;
+}
+
+.welcome-box {
+  border: 2px dashed var(--col-green);
+  padding: 30px;
+  border-radius: 8px;
+}
+
+/* --- TARJETA DE ESTUDIANTE --- */
+.card-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 2px solid var(--col-yellow);
+  padding-bottom: 6px;
+}
+
+.mini-shield-svg { width: 38px; height: 42px; }
+.card-header h2 { font-size: 1.05rem; font-weight: 900; color: var(--col-black); line-height: 1.1; }
+.card-header h3 { font-size: 0.9rem; font-weight: 800; color: var(--col-green); }
+
+.card-body {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 10px;
+  margin-top: 8px;
+  flex: 1;
+}
+
+.fields-column { display: flex; flex-direction: column; gap: 6px; }
+
+.field-box {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 5px 8px;
+  border: 1.5px solid var(--col-border-gray);
+}
+
+.field-box label {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.box-green { border-color: var(--col-green); }
+.box-green label { color: var(--col-green); }
+
+.box-yellow { border-color: var(--col-yellow); }
+.box-yellow label { color: #D97706; }
+
+.box-red { border-color: var(--col-red); }
+.box-red label { color: var(--col-red); }
+
+.box-gray { border-color: #000000; }
+.box-gray label { color: #4B5563; }
+
+.input-field {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 0.75rem;
+  color: #1F2937;
+  background: transparent;
+  resize: none;
+}
+
+.input-field::placeholder { color: #000000; font-style: italic; }
+
+.asp-list { display: flex; flex-direction: column; gap: 2px; }
+.asp-item { display: flex; align-items: center; gap: 4px; }
+.star-icon { color: var(--col-yellow); font-size: 0.65rem; }
+
+.photo-column { display: flex; flex-direction: column; height: 100%; }
+
+.photo-frame {
+  flex: 1;
+  border: 3px solid var(--col-green);
+  border-radius: 8px;
+  background: #F9FAFB;
+  overflow: hidden;
+}
+
+.student-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.signature-box {
+  height: 35px;
+  border: 1px dashed #9CA3AF;
+  border-radius: 6px;
+  background: #FAFAFA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.sig-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-footer {
+  text-align: center;
+  font-size: 0.62rem;
+  font-weight: 800;
+  color: var(--col-black);
+  border-top: 1px solid var(--col-border-gray);
+  padding-top: 4px;
+  margin-top: 4px;
+}
+
+.footer-star { color: var(--col-green); }

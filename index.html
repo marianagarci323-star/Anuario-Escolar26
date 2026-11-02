@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anuario Escolar Interactivo - Promoción 2026</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Barra de Controles Superior -->
+  <header class="top-bar">
+    <div class="brand">
+      <span class="badge">PROMO 2026</span>
+      <h1>Anuario Escolar - 31 Estudiantes</h1>
+    </div>
+    <div class="controls">
+      <button id="btn-prev" class="btn btn-secondary"><i data-lucide="chevron-left"></i> Anterior</button>
+      <span id="page-indicator">Hoja 1 de 17</span>
+      <button id="btn-next" class="btn btn-secondary">Siguiente <i data-lucide="chevron-right"></i></button>
+      <button id="btn-save" class="btn btn-primary"><i data-lucide="save"></i> Guardar Cambios</button>
+    </div>
+  </header>
+
+  <!-- Escenario 3D del Libro -->
+  <main class="book-stage">
+    <div class="book" id="book">
+      
+      <!-- HOJA 0: PORTADA Y CONTRAPORTADA INTERIOR -->
+      <div class="paper flipped" id="p0" style="z-index: 17;">
+        <div class="page front cover-page">
+          <div class="cover-content">
+            <div class="shield-container">
+              <img src="./imagenes/escudo.png.png" alt="Escudo Institucional" class="shield-img">
+            </div>
+            <h1 class="cover-title">ANUARIO ESCOLAR</h1>
+            <h2 class="cover-subtitle">PROMOCIÓN 2026</h2>
+            <div class="motto">CIENCIA Y VIRTUD</div>
+
+            <div class="promo-photo-frame">
+              <img src="./imagenes/graduandos.png.jpeg" alt="Foto Promoción 2026" class="promo-img">
+            </div>
+          </div>
+        </div>
+        <div class="page back inner-cover">
+          <div class="page-header-mini">
+            <span class="gold-star">★</span> INSTITUCIÓN EDUCATIVA <span class="gold-star">★</span>
+          </div>
+          <div class="welcome-box">
+            <h3>Bienvenido a nuestro Anuario 2026</h3>
+            <p>Un espacio dedicado a guardar los recuerdos, frases y aspiraciones de los 31 integrantes de nuestra promoción.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================================================= -->
+      <!-- BLOQUE DE LAS 16 HOJAS (31 ESTUDIANTES COMPLETOS)   -->
+      <!-- ================================================= -->
+
+      <!-- HOJA 1 (Estudiante 1 y 2) -->
+      <div class="paper" id="p1" style="z-index: 16;">
+        <div class="page front">
+          <div class="card-container" data-id="1">
+            <header class="card-header">
+              <div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div>
+              <div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div>
+            </header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Laura Liney Alarcon Cortes"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“El que persevera alcanza ”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="Haber encontrado una persona realmente leal en mi vida"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Doctora"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Enfermera"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Ingeniera"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="Agradezco a Dios y a mi familia que me acompañaron en esta etapa, por su apoyo, consejos y paciencia."></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 1.png" class="sig-img" alt="Firma 1"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 1.jpg" class="student-img" alt="Foto 1"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+        <div class="page back">
+          <div class="card-container" data-id="2">
+            <header class="card-header">
+              <div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield"  style="width: 35px; height: auto;"></div>
+              <div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div>
+            </header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Narly Lizeth Amaya Losada"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“No entendí nada”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="Mi recuerdo favorito es conocer a amistades que me ayudaron en el peor momento y me sacaban una sonrisa
+"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Seguir estudiando"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Terminar hasta sacar el tecnólogo"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Trabajar para conseguir mis cosas  "></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="A mis padres y a todos los docentes que me acompañaron "></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 2.png" class="sig-img" alt="Firma 2"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 2.jpeg" class="student-img" alt="Foto 2"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOJA 2 (Estudiante 3 y 4) -->
+      <div class="paper" id="p2" style="z-index: 15;">
+        <div class="page front">
+          <div class="card-container" data-id="3">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Nycolt Danihela Barrera Mosquera"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“ Su Madreeee”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="Mi recuerdo favorito fue cuando iniciamos nuestro grupito de 4 en septimo con unas amigas "></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Estudiar en el Sena "></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Hacer orgullosa a mi madre"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Infante de Marina y chef"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="Le doy gracias a mi madre por darme u apoyo incondicional en mis etudios y por siempre confiar en mi "></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 3.png" class="sig-img" alt="Firma 3"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 3.jpg" class="student-img" alt="Foto 3"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+        <div class="page back">
+          <div class="card-container" data-id="4">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Andres Felipe Bastidas Lombana"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“Relax que yo remonto”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="Mi noviazgo "></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Odontologo"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="Agradezco a mis padre por todo el esfuerzo  que hicieron todos estos años para que yo pudiera llegar hasta acá MI GRADO DE BACHILLER "></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 4.png" class="sig-img" alt="Firma 4"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 4.jpeg" class="student-img" alt="Foto 4"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOJA 3 (Estudiante 5 y 6) -->
+      <div class="paper" id="p3" style="z-index: 14;">
+        <div class="page front">
+          <div class="card-container" data-id="5">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Estiven Julian Benitez Castro"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“Mire a este negro”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="Sin duda, mi recuerdo favorito fue el día en que me organizaron una fiesta de cumpleaños sorpresa. Ver reunidos a mis 4 mejores amigos, para celebrar conmigo es un momento que guardo con muchísimo cariño en el corazón."></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Mi mayor aspiración es convertirme en doctor y alcanzar todas mis metas profesionales, preparándome con dedicación para proteger la salud de las personas y cumplir con éxito cada objetivo que me proponga en el futuro."></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="Agradezco profundamente a mis compañeros, familiares y profesores por haberme acompañado y guiado en esta etapa. Su apoyo y compañía fueron fundamentales durante todo mi proceso educativo en la secundaria."></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 5.png" class="sig-img" alt="Firma 5"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 5.jpg" class="student-img" alt="Foto 5"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+        <div class="page back">
+          <div class="card-container" data-id="6">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Nikoll Lizeth Bocanegra giraldo"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“En nombre de Dios, todo lo lograre”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="Todos los recuerdos de octavo, pero especialmente cuando dañamos un candado para no tener clases con una profesora"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Estudiar la carrera de mis sueños"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="Gracias a mi familia por el apoyo"></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 6.png" class="sig-img" alt="Firma 6"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 6.jpg" class="student-img" alt="Foto 6"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOJA 4 (Estudiante 7 y 8) -->
+      <div class="paper" id="p4" style="z-index: 13;">
+        <div class="page front">
+          <div class="card-container" data-id="7">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Danna Valentina Caviedes Perdomo"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“Ay Dios mio”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="Mi recuerdo favorito es cuando unos compañeros estaban jugando con una pelota de papel, y accidentalmente le pegaron a una profesora casi dañándole las gafas."></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Estudiar psicología, o seguir con el técnico."></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="Les doy las gracias a mis padres por su apoyo emocional, económico, a mis maestros por su paciencia, y todas las enseñanzas que me han dejado.  "></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 7 (2).jpg" class="sig-img" alt="Firma 7"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 7.jpeg" class="student-img" alt="Foto 7"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+        <div class="page back">
+          <div class="card-container" data-id="8">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Zaidy Liseth Cuellar Caviedes"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“Ay no que pena”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="Mi recuerdo favorito de decimo fue compartir risas, locuras y momento inolvidables con mis compañeros, creando recuerdos que siempre llevare en mi corazón"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Estudiar en el SENA"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Hacer el orgullosa de mi familia"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Cumplir mi sueño sin rendirme"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="Agradezco a mis padres por su amor incondicional, por apoyarme en cada momento y por hacer tantos esfuerzos para darme lo mejor. Gracias por sus consejos, por confiar en mí y por motivarme a seguir adelante, incluso cuando las cosas se ponen difíciles. Ustedes son una parte fundamental de mi vida y una de mis mayores motivaciones para cumplir mis sueños. Todo lo que hacen por mí lo llevo en mi corazón, y espero algún día poder devolverles un poquito de todo lo que me han dado. Los amo mucho y me siento muy afortunada de tenerlos en mi vida."></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 8.png" class="sig-img" alt="Firma 8"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 8.jpeg" class="student-img" alt="Foto 8"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOJA 5 (Estudiante 9 y 10) -->
+      <div class="paper" id="p5" style="z-index: 12;">
+        <div class="page front">
+          <div class="card-container" data-id="9">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Kewin Daniel Escobar Ramirez"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“ole no”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="el dia que jugue un torneo departamental"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="ser profesional en multimediar"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Debutar como jugador"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="le agradesco a mi familia por apoyarme"></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 9.jpeg" class="sig-img" alt="Firma 9"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 9.jpeg" class="student-img" alt="Foto 9"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+        <div class="page back">
+          <div class="card-container" data-id="10">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Laura Valentina Fuentes Aranda"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“Estoy siendo victima de Xenofobia por parte de mi compañero Benítez”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="Todos los días a partir de 9no (2024) han sido como el mejor de todos. Pero los mejores como Prom fueron las horas lúdicas a la ultima hora de todos los miércoles."></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Ser programadora y tener una vida tranquila y digna."></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="Agradezco a cada uno de mis compañeros por haber formado parte de los recuerdos más bonitos de mi último año escolar. Me llevo conmigo las risas, las enseñanzas, los momentos compartidos y la tristeza de saber que una etapa tan especial está llegando a su fin.
+A Yuvettslit Yunda, por ser mi primera amiga al llegar a la institución, por permitirme verla crecer y por ocupar un lugar en mi corazón que el tiempo nunca podrá borrar. A Julieta Rocha, por ser mi compañía, cómplice, apoyo incondicional y una de las amistades más valiosas de este camino. A Isabella Monje, por tenderme la mano cuando más lo necesité; a Laura Serrato, por los momentos vividos; a Estiven Benítez, por su liderazgo, amistad y por hacerme bullying de vez en cuando ; a Laura Marinez, por tantas risas y su apoyo; a Cristian Muñoz, por su compañía; a Heilyn Sánchez y Saory Montaña, por estar presentes cuando pudieron; a Laura Galindo, por su cariño y confianza; y a Johan Ramírez, por su carisma y honestidad. Gracias a todos por dejar un pedacito de ustedes en esta historia que siempre recordaré con cariño.
+A mis profesores, especialmente al profe Sebastián Masmelas, gracias por despertar en mí el amor por la programación.
+
+A mi padre, Leonardo Fuentes, por su apoyo económico durante mi formación; a mis hermanos mayores, Cristian Galindo y Yonatan Galindo, por tenderme la mano cuando lo necesité; y a Esther Hernández, por acompañarme espiritual y emocionalmente en este proceso.
+
+Pero, sobre todo, mi agradecimiento más profundo es para mi mamá, Lina Aranda. Gracias por cada sacrificio, por cada esfuerzo silencioso y por luchar incansablemente para darme un futuro mejor. Gracias por salvarme de la ignorancia, por creer en mí incluso en medio de las dificultades y por dejarlo todo con tal de verme llegar lejos. Si hoy puedo soñar con un futuro lleno de oportunidades, es porque tú has construido el camino con tus propias manos. "></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 10.jpeg" class="sig-img" alt="Firma 10"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 10.jpeg" class="student-img" alt="Foto 10"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOJA 6 (Estudiante 11 y 12) -->
+      <div class="paper" id="p6" style="z-index: 11;">
+        <div class="page front">
+          <div class="card-container" data-id="11">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Laura Valentina Galindo Diaz"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“Tengo Sueño”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="Mi recuerdo favorito es cuando conocí por primera vez a mi mejor amiga Valeria"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Poder especializarme en lo que mas aspiro"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="Le agradezco a mis padres por darme motivación y fuerzas para lograr mis metas y poder seguir adelante."></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 11.jpeg" class="sig-img" alt="Firma 11"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 11.jpeg" class="student-img" alt="Foto 11"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+        <div class="page back">
+          <div class="card-container" data-id="12">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Mariana Garcia Perez"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“Falsos”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="La vez que hicieron caer a Edwin y de paso a Natalia en el puente de guaunda y quedó cochino "></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Psicología o licenciatura en lengua castellana "></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="Agradezco principalmente a Dios y a mis padres sobre todo a mi hermana Nubia quien ah hecho el papel principal en apoyarme tanto académica como financieramente, los amo."></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 12.png" class="sig-img" alt="Firma 12"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 12.jpg" class="student-img" alt="Foto 12"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOJA 7 (Estudiante 13 y 14) -->
+      <div class="paper" id="p7" style="z-index: 10;">
+        <div class="page front">
+          <div class="card-container" data-id="13">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Jesus Fernando Gutierrez Diz"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“Los errores ocurren”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="Cuando obtuve las 80horas sociales sin hacer practicamente nada."></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Convertirme en un Medico"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="Gracias a mis padres, hermano y profesores que me apoyaron en todo para poder salir adelante."></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 13.jpeg" class="sig-img" alt="Firma 13"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 13.jpeg" class="student-img" alt="Foto 13"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+        <div class="page back">
+          <div class="card-container" data-id="14">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Laura Angeline Marinez Olaya"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“no joda ”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="Con mis padres de pequeña"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Estudiar derecho"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="agradezco a mi familia"></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 14.jpg" class="sig-img" alt="Firma 14"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 14.jpg" class="student-img" alt="Foto 14"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOJA 8 (Estudiante 15 y 16) -->
+      <div class="paper" id="p8" style="z-index: 9;">
+        <div class="page front">
+          <div class="card-container" data-id="15">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Francy Fidelina Medina Garcia"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“Todo es mental”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="mi recuerdo favorito en general es cuando compartimos"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Graduarme, ingresar a la universidad, estudiar Medicina, crecer como persona, ayudar a mi familia, conocer nuevos lugares y cumplir cada uno de mis sueños."></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="Agradezco a mi familia, docentes y compañeros por su apoyo, dedicación y enseñanzas durante esta etapa, que han contribuido a mi formación personal y académica."></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 15.png" class="sig-img" alt="Firma 15"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 15.png" class="student-img" alt="Foto 15"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+        <div class="page back">
+          <div class="card-container" data-id="16">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Isabella Monje Vega"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“Te cuento un chiste amisga”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="
+Cuando estaba en el puente con mis amigos y nos inventamos un caso para un juicio 
+"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Tener mi propia empresa y llegar a componer mis propias canciones  "></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="le agradezco a mi mamá, tío y abuela por nunca dejarme sola y confiar en mi incluso cuando yo no lo podía hacer "></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 16.png" class="sig-img" alt="Firma 16"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 16.png" class="student-img" alt="Foto 16"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOJA 9 (Estudiante 17 y 18) -->
+      <div class="paper" id="p9" style="z-index: 8;">
+        <div class="page front">
+          <div class="card-container" data-id="17">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Saory Valentina Montaña Piñeros"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“tengo hambre”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="cuando me la pasaba jugando voleibol "></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="salir del colegio y formar una carrera
+"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="agradecimiento a todos los que me acompañaron en mi formación académica "></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 17.png" class="sig-img" alt="Firma 17"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 17.jpeg" class="student-img" alt="Foto 17"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+        <div class="page back">
+          <div class="card-container" data-id="18">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Julieth Valentina Mora Esquivel"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“somos la resistencia”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="en 7mo cuando jugábamos futbol la mayoría del salón unidos"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="estudiar lo que me gusta y terminarlo, trabajar en eso y formar una hermosa familia"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="agradezco primeramente a Dios por haberme permitirme estar donde estoy y con vida, y a mis padres por apoyarme en cada momento de mi vida y supliendo cada necesidad q tengo "></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 18.png" class="sig-img" alt="Firma 18"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 18.png" class="student-img" alt="Foto 18"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOJA 10 (Estudiante 19 y 20) -->
+      <div class="paper" id="p10" style="z-index: 7;">
+        <div class="page front">
+          <div class="card-container" data-id="19">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Cristian Rene Muñoz Quintero"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“amo a angeline”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="Cuando fui novio de angeline"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="hacer un tecnologo en el SENA, ir a la UNI y estudiar lo que me gusta para ganar mucha plata"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="Agradecimientos a mis papas"></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 19.png" class="sig-img" alt="Firma 19"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 19.jpeg" class="student-img" alt="Foto 19"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+        <div class="page back">
+          <div class="card-container" data-id="20">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Alex Felipe Ortiz Narvaez"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“No mienta”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="cuando jugaba micro con mi compañeros"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="estudiar mi carrera de mis sueños y ser un gran profecional "></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="Primero que todo, quiero dar gracias a Dios por haberme permitido vivir esta experiencia escolar con salud y vida. También agradecer a los profesores que se esforzaron por enseñarnos con dedicación, paciencia y esfuerzo todos sus conocimientos y valores que nos puedan servir en nuestra vida cotidiana. Por último, estaré infinitamente agradecido con mis padres por haberme acompañado y apoyado en todos mis proyectos y en mi trayectoria como estudiante a través del tiempo."></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 20.png" class="sig-img" alt="Firma 20"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 20.jpeg" class="student-img" alt="Foto 20"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOJA 11 (Estudiante 21 y 22) -->
+      <div class="paper" id="p11" style="z-index: 6;">
+        <div class="page front">
+          <div class="card-container" data-id="21">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Duvan Felipe Ortiz Sarmiento"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“yo si estudie pero se me olvido todo”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="cuando jugué futbol con mis compañeros y nos golearon pero no faltaron las risas"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Mis aspiraciones son terminar mis estudios, graduarme del colegio, estudiar lo que me gusta  convertirme en un gran profesional. Sueño con tener un buen trabajo, una casa propia, ayudar económicamente a mi familia, hacer sentir orgullosos a mi mamá y hermano, viajar y conocer nuevos lugares. Aspiro a ser una persona responsable, humilde y respetuosa, cumplir cada uno de mis sueños y construir un futuro lleno de felicidad, éxitos y bendiciones, siempre con la ayuda de Dios."></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="Gracias, Dios, por permitirme vivir esta hermosa etapa de mi vida, por darme la oportunidad de aprender, por cada compañero que puso una sonrisa en mis días y por cada maestro que me enseñó algo más que una lección. Gracias por los momentos felices, por las dificultades que me hicieron más fuerte y por los recuerdos que siempre llevaré en mi corazón. Hoy entiendo que el colegio no solo me dejó conocimientos, sino también amistades, experiencias y enseñanzas que me acompañarán toda la vida."></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 21.png" class="sig-img" alt="Firma 21"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 21.jpeg" class="student-img" alt="Foto 21"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+        <div class="page back">
+          <div class="card-container" data-id="22">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Joan Sebastian Ramirez Garcia"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“sapa”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="Con mis amigas"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="
+ser un gran empresario 
+"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="Agradecimiento a mi familia"></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 22.png" class="sig-img" alt="Firma 22"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 22.jpeg" class="student-img" alt="Foto 22"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOJA 12 (Estudiante 23 y 24) -->
+      <div class="paper" id="p12" style="z-index: 5;">
+        <div class="page front">
+          <div class="card-container" data-id="23">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Julieta Rocha Losada"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“Todo pasa por algo, los planes de Dios son perfectos ”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="
+Cuando me cay en un rio con mis amigos y aprovechamos y nos bañamos.
+"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="quiero cumplir mis dos sueño que es llegar a ser profesora de pedagogía infantil para mostrar esa amor tan grande que tengo con los niños y a enseñarles las base que les van a servir para el resto de su vida , y también después de cumplir eso estudiar para ser azafata es unos de mis mayores sueños y también después de cumplir eso estudiar para ser azafata es unos de mis mayores sueños "></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="A mis papas que han estado en el momento en que naci y me han apollado en todo"></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 23.png" class="sig-img" alt="Firma 23"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 23.jpg" class="student-img" alt="Foto 23"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+        <div class="page back">
+          <div class="card-container" data-id="24">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Heylin Yireth Sanchez Dussan"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“ya quisiera yo”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="el compartir de la salchipapa "></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="llegar ser una persona exitosa que no necesita ayuda de los demás "></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="agradezco a mi familia, amigos , compañeros y profesores por darme enseñanzas , ejemplos y aprendizaje que me ayudaron a formarme como la persona que soy ahora ."></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 24.jpeg" class="sig-img" alt="Firma 24"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 24.png" class="student-img" alt="Foto 24"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOJA 13 (Estudiante 25 y 26) -->
+      <div class="paper" id="p13" style="z-index: 4;">
+        <div class="page front">
+          <div class="card-container" data-id="25">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Thaliana Sofia Sanchez Rocha"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“vive la vida”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="el 2022 con mis amigas"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="ser feliz"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="agradezco a mdzs , a mis padres, a mis profesores y a los compañeros para ayudarme a lograr mis metas "></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 25.jpg" class="sig-img" alt="Firma 25"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 25.png" class="student-img" alt="Foto 25"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+        <div class="page back">
+          <div class="card-container" data-id="26">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Hillary Natalia Serrato Acosta"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="No todo es para siempre, pero tú sí vas a poder con todo."></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="Una vez que estaba caminando con mis amigos por el patio del colegio y después nos fuimos para un lado el cual había un río esa vez me lanzaron al río con otro compañero yo no quería culpar ni avisar a la responsable pero ya la habían delatado en coordinación nos llevaron para allá le pusieron observación y nos regañaron"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Quiero terminar mi bachillerato con la ayuda de Dios graduarme y estudiar para ser un gran licenciada en educación infantil "></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="Agradecimientos a mi familia"></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 26.jpg" class="sig-img" alt="Firma 26"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 26.jpeg" class="student-img" alt="Foto 26"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOJA 14 (Estudiante 27 y 28) -->
+      <div class="paper" id="p14" style="z-index: 3;">
+        <div class="page front">
+          <div class="card-container" data-id="27">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Laura Sofia Serrato Trujillo"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“uy no atrás satanás”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="mi recuerdo favorito es cuando todos fuimos a la casa de el man que me gustaba y ellos se pusieron a de serenata la canción de  la ventana marroncita"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Quiero graduarme feliz junto a mis amigos"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Terminar el tecnólogo"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Entrar en la universidad y estudiar biología"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="gracias a mis amigos: Laura fuentes, Ancizar Triana, Joan Ramírez, Isabella moje, Yuvettslit Yunda... y a todo el salón por ser tan especial para mi y por ser tan unidos a pesar de nuestras diferencias"></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 27.png" class="sig-img" alt="Firma 27"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 27.png" class="student-img" alt="Foto 27"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+        <div class="page back">
+          <div class="card-container" data-id="28">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Nicolas Soto Calderon"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“yo que me saque un 3 me conformo”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="cuando jugamos un partido con mis amigos y nos golearon "></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="tener un trabajo estable, tener un titulo profesional de ingeniero y estar junto a mis padres"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="Primero que todo darle el agradecimiento a mis padres que son los que me han apoyado siempre y en cualquier circunstancia también a mis abuelas que es otro mérito de orgullo saber que tengo una familia unida y que me apoya en todo y gracias a eso es podido con todo y siempre salir adelante afrontando todo"></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 28.png" class="sig-img" alt="Firma 28"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 28.jpeg" class="student-img" alt="Foto 28"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOJA 15 (Estudiante 29 y 30) -->
+      <div class="paper" id="p15" style="z-index: 2;">
+        <div class="page front">
+          <div class="card-container" data-id="29">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Ancizar Steven Triana Murcia"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“six seven”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="El día del compartir en 10°"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Terminar el tecnólogo"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Irme del país junto a mi familia"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Hacer la Universidad"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="Agradezco a mis padres por el gran amor que me han dado, a mis hermanos, al profe sebas por ser tan buen docente y a mis amigos por hacer los dias tan divertidos y mas faciles"></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 29.jpeg" class="sig-img" alt="Firma 29"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 29.jpeg" class="student-img" alt="Foto 29"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+        <div class="page back">
+          <div class="card-container" data-id="30">
+            <header class="card-header"><div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div><div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div></header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Yuvettslit Yunda Cortes"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“Life goes on”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="mi mamá y yo en la graduación de 9no, por como se veía y sentí su orgullo"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="ayudar a mi mllegar a ser profesional en marketing,amá, viajar, tener un trabajo estable, obtener dinero y especializarme en algo"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 2"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Aspiración 3"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="A mi mamá y a mi hermano, por acompañarme durante todo este proceso, por su esfuerzo para conseguir lo que yo necesitaba y, sobre todo por demostrarme su apoyo, amor y orgullo"></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 30.png" class="sig-img" alt="Firma 30"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 30.jpeg" class="student-img" alt="Foto 30"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOJA 16 (Estudiante 31 y Contraportada Final) -->
+      <div class="paper" id="p16" style="z-index: 1;">
+        <div class="page front">
+          <div class="card-container" data-id="31">
+            <header class="card-header">
+              <div class="header-shield"><img src="./imagenes/escudo.png.png" alt="Escudo" class="mini-shield" style="width: 35px; height: auto;"></div>
+              <div class="header-titles"><h2>ANUARIO ESCOLAR</h2><h3>PROMOCION 2026</h3></div>
+            </header>
+            <div class="card-body">
+              <div class="fields-column">
+                <div class="field-box box-green"><label>NOMBRE COMPLETO</label><input type="text" class="input-field" placeholder="Johan Sebastian Masmelas Vega"></div>
+                <div class="field-box box-yellow"><label>FRASE FAVORITA</label><textarea class="input-field" rows="2" placeholder="“La constancia consede la victoria ”"></textarea></div>
+                <div class="field-box box-green"><label>RECUERDO FAVORITO</label><textarea class="input-field" rows="2" placeholder="Cuando me gradue de Ingeniero"></textarea></div>
+                <div class="field-box box-red"><label>LISTA DE ASPIRACIONES</label><div class="asp-list"><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Doctorado enn educacion"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Tener salud"></div><div class="asp-item"><span class="star-icon">★</span><input type="text" class="input-field" placeholder="Ser feliz"></div></div></div>
+                <div class="field-box box-yellow"><label>AGRADECIMIENTOS</label><textarea class="input-field" rows="2" placeholder="a mi familia quiero agradecerles por ser mi mayor refujio y mi equipo incondicional. "></textarea></div>
+                <div class="field-box box-gray"><label>FIRMA</label><div class="signature-box"><img src="./imagenes/firma 31.jpg" class="sig-img" alt="Firma 31"></div></div>
+              </div>
+              <div class="photo-column"><div class="photo-frame"><img src="./imagenes/foto 31.jpg" class="student-img" alt="Foto 31"></div></div>
+            </div>
+            <footer class="card-footer"><span class="footer-star">★</span> PROMOCION 2026 &bull; CIENCIA Y VIRTUD <span class="footer-star">★</span></footer>
+          </div>
+        </div>
+        <div class="page back inner-cover">
+          <div class="welcome-box">
+            <h3>¡Promoción 2026!</h3>
+            <p>Fin del Anuario Escolar.<br><strong>CIENCIA Y VIRTUD</strong></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
+           
+            
+              
